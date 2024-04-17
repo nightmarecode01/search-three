@@ -14,9 +14,21 @@ class Main {
         three.add(2);
         three.add(5);
         three.add(8);
-        three.add(1);
+        three.add(1);        
 
-        three.find(13);
+        three.find(1);
+
+        three.find(8);
+
+        three.tour(-1);
+
+        three.delete(2);
+
+        three.find(1);
+
+        three.find(8);
+
+        three.tour(-1);
     }
 }
 
