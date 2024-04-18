@@ -61,6 +61,8 @@ export class Three {
                 console.log('Major - To Right');
             }
         }
+
+        throw new Error("Error: Value not found");
     }
 
     find(value: number) {
