@@ -77,7 +77,7 @@ export class Three {
     }
 
     private validateAndReplace(foundNode: Node, node: Node) {      
-        if(foundNode.getFather() !== undefined) {
+        if(foundNode.getFather() === undefined) {
             this.root = node;
         } else if(foundNode.isLeft()) {            
             foundNode.getFather().setLeft(node);
