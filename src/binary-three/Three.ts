@@ -76,8 +76,10 @@ export class Three {
         throw new Error("Error: value not found.")
     }
 
-    private validateAndReplace(foundNode: Node, node: Node) {        
-        if(foundNode.isLeft()) {            
+    private validateAndReplace(foundNode: Node, node: Node) {      
+        if(foundNode.getFather() !== undefined) {
+            this.root = node;
+        } else if(foundNode.isLeft()) {            
             foundNode.getFather().setLeft(node);
         } else {
             foundNode.getFather().setRight(node);
